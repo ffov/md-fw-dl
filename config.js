@@ -68,7 +68,7 @@ switch ($_GET["site"]){
 	       default:  {
 			var SiteError = "True";
 			alert("Leider konnten keine Angaben zur Domäne gefunden werden");
-			window.location = "http://www.freifunk-wml.de/";
+			window.location = "index.html";
 			};
             };
 

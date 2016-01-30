@@ -16,6 +16,9 @@
 <script src="lib/infobox.js"></script>
 </head>
 <body class="main" layout-align="center center" layout="column">
+<div id="InfoBox" style="z-index:1; visibility:hidden;">
+<div id="BoxInnen"><span id="BoxInhalte"> </span></div>
+</div>
 <md-whiteframe class="md-whiteframe-z2" layout layout-align="center center">
 <div class="whiteframe-content">
 
@@ -23,11 +26,9 @@
 <p class="headline">Schritt 1 bitte wähle die Region, in der dein Router aufgestellt wird:</p>
 
 
-<div id="InfoBox" style="z-index:1; visibility:hidden;">
-<div id="BoxInnen"><span id="BoxInhalte"> </span></div>
-</div>
 
-<map class="main" id="ImgMap0" name="ImgMap0">
+
+<map class="headline" id="ImgMap0" name="ImgMap0">
 <area alt="" coords="331, 159, 328, 149, 332, 140, 324, 129, 312, 130, 290, 118, 282, 109, 289, 101, 275, 82, 254, 117, 245, 117, 218, 94, 204, 94, 193, 102, 186, 122, 174, 129, 150, 128, 143, 145, 125, 158, 120, 174, 145, 181, 162, 196, 172, 208, 174, 219, 161, 221, 157, 235, 136, 258, 120, 248, 72, 265, 42, 284, 15, 273, 11, 277, 18, 285, 22, 308, 31, 316, 60, 306, 77, 323, 92, 321, 113, 329, 129, 334, 153, 348, 185, 360, 200, 359, 205, 333, 221, 334, 226, 318, 239, 318, 248, 329, 266, 329, 285, 315, 298, 306, 280, 298, 263, 281, 255, 267, 254, 259, 263, 248, 265, 233, 267, 218, 257, 207, 252, 197, 256, 191, 266, 195, 282, 188, 289, 180, 296, 173, 314, 170, 328, 170" href="assistent.html?site=d06" shape="poly" onMouseOver="InfoBoxAnzeigen(event,'Domäne 06 - Westmünsterland',20,-30);" onMouseOut="InfoBoxAusblenden();"/>
 <area alt="" coords="331, 167, 325, 173, 300, 174, 285, 190, 272, 195, 265, 198, 264, 196, 254, 196, 260, 204, 269, 212, 270, 233, 263, 251, 260, 262, 263, 273, 268, 284, 288, 295, 298, 301, 319, 304, 322, 313, 328, 318, 333, 330, 331, 339, 333, 343, 338, 344, 346, 350, 348, 353, 345, 367, 347, 370, 361, 378, 361, 381, 378, 395, 389, 395, 396, 392, 401, 384, 394, 377, 389, 369, 393, 360, 401, 358, 402, 357, 405, 357, 411, 366, 418, 364, 422, 369, 426, 378, 432, 385, 442, 373, 465, 368, 480, 361, 486, 358, 491, 366, 504, 360, 503, 351, 496, 345, 491, 333, 483, 319, 480, 307, 476, 303, 463, 302, 459, 298, 455, 293, 445, 290, 437, 284, 437, 275, 430, 266, 428, 263, 422, 262, 419, 250, 418, 242, 419, 240, 409, 236, 404, 233, 409, 223, 419, 212, 422, 206, 421, 203, 406, 202, 398, 197, 391, 199, 389, 194, 389, 188, 385, 180, 377, 180, 370, 185, 367, 182, 357, 178, 343, 174, 339, 167" href="assistent.html?site=d02" shape="poly" onMouseOver="InfoBoxAnzeigen(event,'Domäne 02 - Kreis Coesfeld',20,-30);" onMouseOut="InfoBoxAusblenden();"/>
 <area alt="" coords="419, 197, 408, 198, 403, 195, 393, 196, 393, 184, 385, 175, 377, 176, 369, 185, 365, 177, 355, 175, 348, 173, 343, 165, 333, 161, 333, 147, 333, 140, 330, 132, 327, 125, 313, 125, 306, 124, 292, 113, 288, 110, 288, 99, 284, 91, 275, 81, 272, 77, 269, 65, 271, 56, 276, 50, 284, 44, 301, 41, 330, 42, 343, 38, 352, 34, 355, 42, 354, 50, 357, 62, 360, 66, 364, 78, 371, 84, 390, 87, 393, 93, 403, 106, 401, 109, 410, 118, 421, 125, 429, 128, 428, 137, 430, 146, 433, 145, 428, 153, 434, 167, 435, 169, 426, 178, 426, 184, 421, 191" href="assistent.html?site=d03" shape="poly" onMouseOver="InfoBoxAnzeigen(event,'Domäne 03 - Kreis Steinfurt West',20,-30);" onMouseOut="InfoBoxAusblenden();"/>
@@ -38,7 +39,7 @@
 </map>
 
 
-<img class="main"  alt="Karte" src="img/karte.jpg" usemap="#ImgMap0" onMouseOut="InfoBoxAusblenden();"/>
+<img class="headline"  alt="Karte" src="img/karte.jpg" usemap="#ImgMap0" onMouseOut="InfoBoxAusblenden();"/>
 </div>
 </md-whiteframe>
 </body>

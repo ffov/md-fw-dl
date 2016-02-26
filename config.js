@@ -1,6 +1,6 @@
 var config = {
 
-version: "2015.1.2",
+version: "2016.1",
 
 modes: {
   "factory": "Erstinstallation (Neu gekaufter Router)",
@@ -8,13 +8,13 @@ modes: {
 },
 
 sites:{
-"domaene01" : {id: "domaene01",short:"d01",name:"Münster Stadt", version:"0.1.2"},
-"domaene02" : {id: "domaene02",short:"d02",name:"Kreis Coesfeld", version:"0.0.3"},
-"domaene03" : {id: "domaene03",short:"d03",name:"Kreis Steinfurt West", version:"0.0.1"},
-"domaene04" : {id: "domaene04",short:"d04",name:"Kreis Steinfurt Ost", version:"0.0.2"},
-"domaene05" : {id: "domaene05",short:"d05",name:"Münster Süd", version:"0.0.2"},
-"domaene06" : {id: "domaene06",short:"d06",name:"Westmünsterland", version:"0.0.2"},
-"domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"0.0.2"},
+"domaene01" : {id: "domaene01",short:"d01",name:"Münster Stadt", version:"1.0.1"},
+"domaene02" : {id: "domaene02",short:"d02",name:"Kreis Coesfeld", version:"1.0.1"},
+"domaene03" : {id: "domaene03",short:"d03",name:"Kreis Steinfurt West", version:"1.0.1"},
+"domaene04" : {id: "domaene04",short:"d04",name:"Kreis Steinfurt Ost", version:"1.0.1"},
+"domaene05" : {id: "domaene05",short:"d05",name:"Münster Süd", version:"1.0.1"},
+"domaene06" : {id: "domaene06",short:"d06",name:"Westmünsterland", version:"1.0.1"},
+"domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"1"},
 },
 
 //router list for gluon v2015.1

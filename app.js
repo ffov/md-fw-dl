@@ -66,8 +66,11 @@ var mapTools = {
         return legend;
     },
     settings : {},
-    bcolors : ['#2980B9', '#8E44AD', '#C83D2F', '#EC5E00', '#F1C40F', '#27AE60', '#34495E'],
-    activeLayer : false
+    bcolors : ['#2980B9', '#8E44AD', '#C83D2F', '#EC5E00', '#F1C40F', '#27AE60', '#34495E', '#EB008D', '#FF66C2'],
+    activeLayer : false,
+    selection_state : {
+        mouseover : false //fix for multipolygon firefox issue
+    }
 }
 
 angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
@@ -80,9 +83,9 @@ angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
 
     angular.extend($scope, {
         muenster: {
-            lat: 52.01,
-            lng: 7.27,
-            zoom: 9,
+            lat: 52.1,
+            lng: 6.9,
+            zoom: 8,
             //autoDiscover: true
         },
         defaults: {
@@ -107,18 +110,24 @@ angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
         });
     });
     $scope.$on("leafletDirectiveGeoJson.dommap.mouseover", function(ev, leafletPayload) {
-        var target = leafletPayload.leafletEvent.target;
-        var layer = leafletPayload.leafletEvent.target;
-        layer.setStyle({
-            weight: 2,
-            color: '#777',
-            dashArray: '0',
-            fillOpacity: 0.4
-        });
-        layer.bringToFront();
+        if (mapTools.selection_state.mouseover != leafletPayload.layerName){
+            console.log(leafletPayload);
+            var target = leafletPayload.leafletEvent.target;
+            var layer = leafletPayload.leafletEvent.target;
+            layer.setStyle({
+                weight: 2,
+                color: '#777',
+                dashArray: '0',
+                fillOpacity: 0.4
+            });
+            layer.bringToFront();
+            mapTools.selection_state.mouseover = leafletPayload.layerName;
+        }
+
     });
 
     $scope.$on("leafletDirectiveGeoJson.dommap.mouseout", function(ev, leafletPayload) {
+        mapTools.selection_state.mouseover = false;
         var target = leafletPayload.leafletEvent.target;
         var layer = leafletPayload.leafletEvent.target;
         var activeLayer = angular.fromJson($scope.selectedSite);

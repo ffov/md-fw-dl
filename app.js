@@ -171,6 +171,7 @@ angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
         $scope.selectedSite = $filter('json')(config.sites[leafletPayload.layerName]);
     });
 
+
     
     $scope.parse = function (string) {
         try {
@@ -193,14 +194,15 @@ angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
     $scope.buildFirmwareUrl = function() {
         var url = $scope.interpolate(config.url);
         var manufacturer = angular.fromJson($scope.selectedManufacturer);
+        var router = angular.fromJson($scope.selectedRouter);
         if (manufacturer == null) {
             return url;
         }
 
         if (manufacturer.name == config.manufacturers['6netgear'].name && $scope.selectedMode == 'factory') {
             url += '.img';
-        } else if (manufacturer.name == config.manufacturers['7x86'].name) {
-            url += '';
+        } else if ( 'extension' in router) {
+            url += '.'+router.extension;
         } else {
             url += '.bin';
         }

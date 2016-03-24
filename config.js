@@ -16,7 +16,7 @@ sites:{
 "domaene06" : {id: "domaene06",short:"d06",name:"Westmünsterland", version:"1.0.4", version_base:"2016.1.2"},
 "domaene08_06" : {id: "domaene08_06",short:"d06",name:"Stadtlohn", version:"1.0.4", version_base:"2016.1.2"},
 "domaene11_06" : {id: "domaene11_06",short:"d06",name:"Bocholt", version:"1.0.4", version_base:"2016.1.2"},
-"domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"1", version_base:"2016.1"},
+"domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"1", version_base:"2016.1.1"},
 },
 
 //router list for gluon v2015.1

@@ -8,15 +8,15 @@ modes: {
 },
 
 sites:{
-"domaene01" : {id: "domaene01",short:"d01",name:"Münster Stadt", version:"1.0.4"},
-"domaene02" : {id: "domaene02",short:"d02",name:"Kreis Coesfeld", version:"1.0.4"},
-"domaene03" : {id: "domaene03",short:"d03",name:"Kreis Steinfurt West", version:"1.0.4"},
-"domaene04" : {id: "domaene04",short:"d04",name:"Kreis Steinfurt Ost", version:"1.0.4"},
-"domaene05" : {id: "domaene05",short:"d05",name:"Münster Süd", version:"1.0.4"},
-"domaene06" : {id: "domaene06",short:"d06",name:"Westmünsterland", version:"1.0.4"},
-"domaene08_06" : {id: "domaene08_06",short:"d06",name:"Stadtlohn", version:"1.0.4"},
-"domaene11_06" : {id: "domaene11_06",short:"d06",name:"Bocholt", version:"1.0.4"},
-"domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"1"},
+"domaene01" : {id: "domaene01",short:"d01",name:"Münster Stadt", version:"1.0.4", version_base:"2016.1.2"},
+"domaene02" : {id: "domaene02",short:"d02",name:"Kreis Coesfeld", version:"1.0.4", version_base:"2016.1.2"},
+"domaene03" : {id: "domaene03",short:"d03",name:"Kreis Steinfurt West", version:"1.0.4", version_base:"2016.1.2"},
+"domaene04" : {id: "domaene04",short:"d04",name:"Kreis Steinfurt Ost", version:"1.0.4", version_base:"2016.1.2"},
+"domaene05" : {id: "domaene05",short:"d05",name:"Münster Süd", version:"1.0.4", version_base:"2016.1.2"},
+"domaene06" : {id: "domaene06",short:"d06",name:"Westmünsterland", version:"1.0.4", version_base:"2016.1.2"},
+"domaene08_06" : {id: "domaene08_06",short:"d06",name:"Stadtlohn", version:"1.0.4", version_base:"2016.1.2"},
+"domaene11_06" : {id: "domaene11_06",short:"d06",name:"Bocholt", version:"1.0.4", version_base:"2016.1.2"},
+"domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"1", version_base:"2016.1"},
 },
 
 //router list for gluon v2015.1
@@ -128,5 +128,5 @@ name: "Münsterland",
 
 
 url: "http://firmware.freifunk-muensterland.org/{{parse(selectedSite).id}}/versions/v{{parse(selectedSite).version}}/{{selectedMode}}/gluon-ffms{{parse(selectedSite).short}}-v" +
-"{{config.version}}+{{parse(selectedSite).version}}-{{parse(selectedRouter).id}}{{selectedMode=='sysupgrade'?'-sysupgrade':''}}"
+"{{parse(selectedSite).version_base}}+{{parse(selectedSite).version}}-{{parse(selectedRouter).id}}{{selectedMode=='sysupgrade'?'-sysupgrade':''}}"
 }

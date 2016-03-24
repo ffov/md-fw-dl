@@ -111,7 +111,6 @@ angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
     });
     $scope.$on("leafletDirectiveGeoJson.dommap.mouseover", function(ev, leafletPayload) {
         if (mapTools.selection_state.mouseover != leafletPayload.layerName){
-            console.log(leafletPayload);
             var target = leafletPayload.leafletEvent.target;
             var layer = leafletPayload.leafletEvent.target;
             layer.setStyle({

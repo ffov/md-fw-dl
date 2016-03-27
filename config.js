@@ -15,7 +15,7 @@ sites:{
 "domaene05" : {id: "domaene05",short:"d05",name:"Münster Süd", version:"1.0.4", version_base:"2016.1.2"},
 "domaene06" : {id: "domaene06",short:"d06",name:"Westmünsterland", version:"1.0.4", version_base:"2016.1.2"},
 "domaene09" : {id: "domaene09",short:"d09",name:"Stadtlohn", version:"1.0.5", version_base:"2016.1.x"},
-"domaene11_06" : {id: "domaene11_06",short:"d06",name:"Bocholt", version:"1.0.4", version_base:"2016.1.2"},
+"domaene11" : {id: "domaene11",short:"d11",name:"Bocholt", version:"1.0.5", version_base:"2016.1.x"},
 "domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"1", version_base:"2016.1.1"},
 },
 

@@ -14,11 +14,11 @@ sites:{
 "domaene04" : {id: "domaene04",short:"d04",name:"Kreis Steinfurt Ost", version:"1.0.4", version_base:"2016.1.2"},
 "domaene05" : {id: "domaene05",short:"d05",name:"Münster Süd", version:"1.0.4", version_base:"2016.1.2"},
 "domaene06" : {id: "domaene06",short:"d06",name:"Westmünsterland", version:"1.0.4", version_base:"2016.1.2"},
-"domaene08" : {id: "domaene08",short:"d06",name:"Gescher", version:"1.0.4", version_base:"2016.1.2"},
+"domaene08" : {id: "domaene08",short:"d06",name:"Gescher", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene06"},
 "domaene09" : {id: "domaene09",short:"d09",name:"Stadtlohn", version:"1.0.5", version_base:"2016.1.x"},
 "domaene11" : {id: "domaene11",short:"d11",name:"Bocholt", version:"1.0.5", version_base:"2016.1.x"},
-"domaene12" : {id: "domaene12",short:"d02",name:"Dülmen (ohne Rorup)", version:"1.0.4", version_base:"2016.1.2"},
-"domaene13" : {id: "domaene13",short:"d02",name:"Rorup", version:"1.0.4", version_base:"2016.1.2"},
+"domaene12" : {id: "domaene12",short:"d02",name:"Dülmen (ohne Rorup)", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene02"},
+"domaene13" : {id: "domaene13",short:"d02",name:"Rorup", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene02"},
 "domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"1", version_base:"2016.1.1"},
 },
 
@@ -132,6 +132,6 @@ routers: {
 name: "Münsterland",
 
 
-url: "http://firmware.freifunk-muensterland.org/{{parse(selectedSite).id}}/versions/v{{parse(selectedSite).version}}/{{selectedMode}}/gluon-ffms{{parse(selectedSite).short}}-v" +
-"{{parse(selectedSite).version_base}}+{{parse(selectedSite).version}}-{{parse(selectedRouter).id}}{{selectedMode=='sysupgrade'?'-sysupgrade':''}}"
+url: "http://firmware.freifunk-muensterland.org/{{parse(downloadableSite).id}}/versions/v{{parse(downloadableSite).version}}/{{selectedMode}}/gluon-ffms{{parse(downloadableSite).short}}-v" +
+"{{parse(downloadableSite).version_base}}+{{parse(downloadableSite).version}}-{{parse(selectedRouter).id}}{{selectedMode=='sysupgrade'?'-sysupgrade':''}}"
 }

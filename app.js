@@ -64,13 +64,20 @@ angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
     };
 
     $scope.buildFirmwareUrl = function() {
+        var site = angular.fromJson($scope.selectedSite);
+        if (site != null && site.proxy_to != null){
+            $scope.downloadableSite = $filter('json')(config.sites[site.proxy_to]);
+        }else {
+            $scope.downloadableSite = angular.copy($scope.selectedSite);
+        }
+        
         var url = $scope.interpolate(config.url);
         var manufacturer = angular.fromJson($scope.selectedManufacturer);
         var router = angular.fromJson($scope.selectedRouter);
-        if (manufacturer == null) {
+
+        if (manufacturer == null || router == null) {
             return url;
         }
-
         if (manufacturer.name == config.manufacturers['6netgear'].name && $scope.selectedMode == 'factory') {
             url += '.img';
         } else if ( 'extension' in router) {

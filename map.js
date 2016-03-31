@@ -4,7 +4,7 @@
 
 var mapTools = {
     settings : {},
-    bcolors : ['#2980B9', '#8E44AD', '#C83D2F', '#EC5E00', '#F1C40F', '#27AE60', '#34495E', '#EB008D', '#FF66C2'],
+    bcolors : ['#2980B9', '#8E44AD', '#C83D2F', '#EC5E00', '#F1C40F', '#27AE60', '#34495E', '#EB008D', '#FF66C2', '#CCFF33', '#33CCFF', '#70E000'],
     activeLayer : false,
     selection_state : {
         mouseover : false //fix for multipolygon firefox issue
@@ -53,7 +53,7 @@ mapTools.prepare = function(sites){
 
 mapTools.buildLegend = function(){
     var legend = {
-        position : 'bottomleft',
+        position : 'bottomright',
         colors : [],
         labels : []
     };
@@ -68,9 +68,9 @@ mapTools.buildLegend = function(){
 mapTools.initMap = function($scope, $http){
     angular.extend($scope, {
         muenster: {
-            lat: 52.1,
-            lng: 6.9,
-            zoom: 8,
+            lat: 51.99,
+            lng: 7.3,
+            zoom: 9,
             //autoDiscover: true
         },
         defaults: {

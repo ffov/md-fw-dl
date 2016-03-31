@@ -70,6 +70,7 @@ md-select {
 
 .whiteframe-content {
   height: 100%;
+  width: 100%;
 }
 
 @media (orientation: portrait) {

@@ -43,7 +43,7 @@ angular.module('firmwareDownload', ['ngMaterial'])
       };
 
       $scope.selectionChanged = function () {
-        var newURL = window.location.protocol + '//' + window.location.host + '/' + window.location.pathname;
+        var newURL = window.location.protocol + '//' + window.location.host + window.location.pathname;
 
         var args = []
         if($scope.selectedRouter)
@@ -51,20 +51,45 @@ angular.module('firmwareDownload', ['ngMaterial'])
         if($scope.selectedManufacturer)
           args.push('manufacturer=' + $scope.parse($scope.selectedManufacturer).id)
         if($scope.selectedSite)
-          args.push('region=' + $scope.selectedSite)
+          args.push('region=' + $scope.parse($scope.selectedSite).id)
         if($scope.selectedMode != 'factory')
           args.push('mode=' + $scope.selectedMode)
         newURL += '?' + args.join('&')
-
+        console.log(newURL);
         History.pushState(null, null, newURL);
-      }
+      };
+
+    $scope.buildFirmwareUrl = function() {
+        var site = $scope.parse($scope.selectedSite);
+        if (site != null && site.proxy_to != null){
+            $scope.downloadableSite = $filter('json')(config.sites[site.proxy_to]);
+        }else {
+            $scope.downloadableSite = angular.copy($scope.selectedSite);
+        }
+        var url = $scope.interpolate(config.url);
+        var manufacturer = $scope.selectedManufacturer;
+        var router = $scope.selectedRouter;
+
+        if (manufacturer == null || router == null) {
+            return url;
+        }
+        if (manufacturer.name == config.manufacturers['netgear'].name && $scope.selectedMode == 'factory') {
+            url += '.img';
+        } else if (router.extension != null) {
+            url += '.'+router.extension;
+        } else {
+            url += '.bin';
+        }
+      console.log(url);
+      return url;
+    };
 
       //select factory by default
       $scope.selectedMode = 'factory';
 
       //read selection from url parameters
       if($location.search().mode != null) { $scope.selectedMode = $location.search().mode; }
-      if($location.search().region != null) { $scope.selectedSite = $location.search().region; }
+      if($location.search().region != null) { $scope.selectedSite = $filter('json')(config.sites[$location.search().region]); }
       if($location.search().manufacturer != null) { $scope.selectedManufacturer = $filter('json')(config.manufacturers[$location.search().manufacturer]); }
       if($location.search().router != null) { $scope.selectedRouter = $filter('json')(config.routers[$location.search().router]); }
     }, function(err) {console.log(err)});

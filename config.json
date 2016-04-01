@@ -24,14 +24,14 @@
 
   
   "manufacturers": {
-    "0tp-link": {"id": "tp-link", "name": "TP-Link"},
-    "1ubiquiti": {"id": "ubiquiti", "name": "Ubiquiti"},
-    "2buffalo": {"id": "buffalo", "name": "Buffalo"},
-    "3d-link": {"id": "d-link", "name": "D-Link"},
-    "4gl-inet": {"id": "gl-inet", "name": "GL-Inet"},
-    "5linksys": {"id": "linksys", "name": "Linksys"},
-    "6netgear": {"id": "netgear", "name": "Netgear"},
-    "7x86":{"id": "x86","name": "x86"}
+    "tp-link": {"id": "tp-link", "name": "TP-Link"},
+    "ubiquiti": {"id": "ubiquiti", "name": "Ubiquiti"},
+    "buffalo": {"id": "buffalo", "name": "Buffalo"},
+    "d-link": {"id": "d-link", "name": "D-Link"},
+    "gl-inet": {"id": "gl-inet", "name": "GL-Inet"},
+    "linksys": {"id": "linksys", "name": "Linksys"},
+    "netgear": {"id": "netgear", "name": "Netgear"},
+    "x86":{"id": "x86","name": "x86"}
   },
 
   "routers": {

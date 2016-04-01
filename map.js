@@ -91,7 +91,7 @@ mapTools.initMap = function($scope, $http, sites){
     var domStyle;
     angular.forEach(mapTools.settings, function(dom){
         $http.get(dom.geojson).success(function(data, status) {
-            if (dom.id == $scope.parse($scope.selectedSite).id){
+            if ($scope.selectedSite != null && dom.id == $scope.parse($scope.selectedSite).id){
                 domStyle = mapTools.getStyleClicked(dom);
             }
             else {

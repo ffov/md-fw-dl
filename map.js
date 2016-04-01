@@ -64,29 +64,44 @@ mapTools.buildLegend = function(){
     return legend;
 };
 
-
-mapTools.initMap = function($scope, $http){
+mapTools.preInit = function($scope) {
     angular.extend($scope, {
-        muenster: {
-            lat: 51.99,
-            lng: 7.3,
-            zoom: 9,
-            //autoDiscover: true
-        },
-        defaults: {
-            scrollWheelZoom: false
-        },
-        legend : mapTools.buildLegend(),
-        geojson : {}
+    muenster: {
+        lat: 51.99,
+        lng: 7.4,
+        zoom: 9,
+        //autoDiscover: true
+    },
+    defaults: {
+        scrollWheelZoom: false
+    },
+    legend : {
+        position : 'bottomright',
+        colors : [],
+        labels : []
+    },
+    geojson : {}
     });
+}
+mapTools.initMap = function($scope, $http, sites){
+    mapTools.prepare(sites);
+    var legends = mapTools.buildLegend();
+    console.log(legends);
+    $scope.legend = legends;
     var settings = {};
-    
+    var domStyle;
     angular.forEach(mapTools.settings, function(dom){
         $http.get(dom.geojson).success(function(data, status) {
+            if (dom.id == $scope.parse($scope.selectedSite).id){
+                domStyle = mapTools.getStyleClicked(dom);
+            }
+            else {
+                domStyle = mapTools.getStyle(dom);
+            }
             settings[dom.id] = {
                 data: data,
                 resetStyleOnMouseout: false,
-                style: mapTools.getStyle(dom)
+                style: domStyle
             };
             //dirty hack, cause $q..then() won't play with me
             if (Object.keys(mapTools.settings).length == Object.keys(settings).length){
@@ -152,6 +167,6 @@ mapTools.watchSelectedSite = function($scope, leafletData, newValue, oldValue){
     });
 };
 
-mapTools.onLeafletDirectiveGeoJsonDommapClick = function($scope, $filter, ev, leafletPayload){
-    $scope.selectedSite = $filter('json')(config.sites[leafletPayload.layerName]);
+mapTools.onLeafletDirectiveGeoJsonDommapClick = function($scope, $filter, ev, leafletPayload, sites){
+    $scope.selectedSite = $filter('json')(sites[leafletPayload.layerName]);
 };

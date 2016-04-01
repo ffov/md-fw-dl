@@ -16,13 +16,18 @@
     You should have received a copy of the GNU General Public License
     along with the Material Design Firmware Downloader.  If not, see <http://www.gnu.org/licenses/>. */
 
-angular.module('firmwareDownload', ['ngMaterial'])
-  .controller('DownloadCtrl', function($scope, $location, $interpolate, $filter, $http) {
-
+angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
+  .controller('DownloadCtrl', function($scope, $location, $interpolate, $filter, $http, leafletData) {
+    mapTools.preInit($scope);
     $http.get('config.json').then(function(res) {
       $scope.config = res.data;
       var config = res.data;
-      document.title = config.name + ' Firmware'
+      document.title = config.name + ' Firmware';
+
+      leafletData.getGeoJSON().then(function(lObjs){
+        window.leafletDataGeoJSON = lObjs;
+      });
+      mapTools.initMap($scope, $http, config.sites, leafletData);
 
       $scope.parse = function (string) {
         try {
@@ -41,6 +46,27 @@ angular.module('firmwareDownload', ['ngMaterial'])
           }
         } catch (error) {}
       };
+
+
+
+      $scope.$on("leafletDirectiveGeoJson.dommap.mouseover", function(ev, leafletPayload) {
+        mapTools.mouseOver($scope, ev, leafletPayload);
+      });
+
+      $scope.$on("leafletDirectiveGeoJson.dommap.mouseout", function(ev, leafletPayload) {
+        mapTools.mouseOut($scope, ev, leafletPayload);
+      });
+
+      //TODO: better way for "external" updating layer style
+      $scope.$watch("selectedSite", function(newValue, oldValue) {
+        console.log(newValue);
+        console.log($scope.selectedSite);
+        mapTools.watchSelectedSite($scope, leafletData, newValue, oldValue);
+      });
+
+      $scope.$on("leafletDirectiveGeoJson.dommap.click", function(ev, leafletPayload) {
+        mapTools.onLeafletDirectiveGeoJsonDommapClick($scope, $filter, ev, leafletPayload, config.sites);
+      });
 
       $scope.selectionChanged = function () {
         var newURL = window.location.protocol + '//' + window.location.host + window.location.pathname;

@@ -60,7 +60,7 @@ md-whiteframe {
 
 md-select {
   width: 90%;
-  margin: 15px;
+  margin: 15px auto 15px;
 }
 
 .md-button {

@@ -59,8 +59,6 @@ angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
 
       //TODO: better way for "external" updating layer style
       $scope.$watch("selectedSite", function(newValue, oldValue) {
-        console.log(newValue);
-        console.log($scope.selectedSite);
         mapTools.watchSelectedSite($scope, leafletData, newValue, oldValue);
       });
 
@@ -81,7 +79,6 @@ angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
         if($scope.selectedMode != 'factory')
           args.push('mode=' + $scope.selectedMode)
         newURL += '?' + args.join('&')
-        console.log(newURL);
         History.pushState(null, null, newURL);
       };
 
@@ -106,7 +103,6 @@ angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
         } else {
             url += '.bin';
         }
-      console.log(url);
       return url;
     };
 

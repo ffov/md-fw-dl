@@ -86,7 +86,6 @@ mapTools.preInit = function($scope) {
 mapTools.initMap = function($scope, $http, sites){
     mapTools.prepare(sites);
     var legends = mapTools.buildLegend();
-    console.log(legends);
     $scope.legend = legends;
     var settings = {};
     var domStyle;
@@ -169,4 +168,5 @@ mapTools.watchSelectedSite = function($scope, leafletData, newValue, oldValue){
 
 mapTools.onLeafletDirectiveGeoJsonDommapClick = function($scope, $filter, ev, leafletPayload, sites){
     $scope.selectedSite = $filter('json')(sites[leafletPayload.layerName]);
+    //$scope.selectionChanged();
 };

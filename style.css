@@ -51,6 +51,7 @@ h2.headline {
   width: 80px;
   float: left;
 }
+
 md-whiteframe {
   overflow: auto !important;
   width: 55%;
@@ -95,51 +96,31 @@ md-select {
   -moz-margin-end: 60px;
 }
 
-.legend {
-    text-align: left;
-    font: 14px/16px Arial, Helvetica, sans-serif;
-    background: rgba(255,255,255, 0.9);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    padding: 6px 8px;
-    width: 170px;
-    line-height: 18px;
-    color: #555;
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(font/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-.legend i {
-    width: 16px;
-    height: 16px;
-    float: left;
-    margin-right: 8px;
-    opacity: 0.7;
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(font/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-.leaflet-top,
-.leaflet-bottom {
-  z-index: 80;
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(font/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
-@media (max-width: 1024px) {
-  md-whiteframe {
-    width: 100%;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1280px) {
-  md-whiteframe {
-    width: 80%;
-  }
-}
-@media (min-width: 1281px) and (max-width: 1440px) {
-  md-whiteframe {
-    width: 70%;
-  }
-}
-@media (min-width: 1441px) and (max-width: 1680px) {
-  md-whiteframe {
-    width: 60%;
-  }
-}
-@media (min-width: 1681px){
-  md-whiteframe {
-    width: 55%;
-  }
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(font/vPcynSL0qHq_6dX7lKVByfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }

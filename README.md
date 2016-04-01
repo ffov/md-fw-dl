@@ -1,4 +1,7 @@
-# Material Design Freifunk Firmware Downloader
+# md-fw-dl
+Material Design Freifunk Firmware Downloader
+Copyright 2016 PetaByteBoy
+Licensed under GPLv3
 
 ## Einführung
 Der Material Design Freifunk Firmware Downloader (kurz: md-fw-dl) ist ein Programm, dass dem geneigten Nutzer die Auswahl der korrekten, für ihn benötigten Firmware erleichtern soll. Bei dieser, auf die Bedürfnisse der Bewegung Freifunk Münsterland, angepassten Variante des deutschlandweit eingesetzten Programmes, wurde extra eine Karte eingebaut, die die Auswahl der lokal benötigten Firmware erleichtert.

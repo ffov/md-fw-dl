@@ -1,5 +1,5 @@
 
-/*  Copyright 2015 PetaByteBoy
+/*  Copyright 2016 PetaByteBoy
 
     This file is part of the Material Design Firmware Downloader.
 
@@ -16,91 +16,60 @@
     You should have received a copy of the GNU General Public License
     along with the Material Design Firmware Downloader.  If not, see <http://www.gnu.org/licenses/>. */
 
-angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
-  .controller('DownloadCtrl', function($scope, $location, $interpolate, $filter, $http, leafletData){
-    mapTools.prepare(config.sites);
-    $scope.config = config;
-    leafletData.getGeoJSON().then(function(lObjs){
-        window.leafletDataGeoJSON = lObjs;
-    });
+angular.module('firmwareDownload', ['ngMaterial'])
+  .controller('DownloadCtrl', function($scope, $location, $interpolate, $filter, $http) {
 
-    mapTools.initMap($scope, $http);
+    $http.get('config.json').then(function(res) {
+      $scope.config = res.data;
+      var config = res.data;
+      document.title = config.name + ' Firmware'
 
-    $scope.$on("leafletDirectiveGeoJson.dommap.mouseover", function(ev, leafletPayload) {
-        mapTools.mouseOver($scope, ev, leafletPayload);
-    });
-
-    $scope.$on("leafletDirectiveGeoJson.dommap.mouseout", function(ev, leafletPayload) {
-        mapTools.mouseOut($scope, ev, leafletPayload);
-    });
-
-    //TODO: better way for "external" updating layer style
-    $scope.$watch("selectedSite", function(newValue, oldValue) {
-        mapTools.watchSelectedSite($scope, leafletData, newValue, oldValue);
-    });
-
-    $scope.$on("leafletDirectiveGeoJson.dommap.click", function(ev, leafletPayload) {
-        mapTools.onLeafletDirectiveGeoJsonDommapClick($scope, $filter, ev, leafletPayload);
-    });
-
-
-    
-    $scope.parse = function (string) {
+      $scope.parse = function (string) {
         try {
-            return JSON.parse(string);
+          return JSON.parse(string);
         } catch (error) {}
-    };
-    
-    $scope.splitString = function (string, nb) {
-        return string.substring(0,nb);
-    };
+      };
 
-    $scope.interpolate = function (value) {
+      $scope.splitString = function (string, nb) {
+         return string.substring(0,nb);
+      };
+
+      $scope.interpolate = function (value) {
         try {
-            if (typeof(value) != undefined) {
-                return $interpolate(value)($scope);
-            }
+          if (typeof(value) != undefined) {
+            return $interpolate(value)($scope);
+          }
         } catch (error) {}
-    };
+      };
 
-    $scope.buildFirmwareUrl = function() {
-        var site = angular.fromJson($scope.selectedSite);
-        if (site != null && site.proxy_to != null){
-            $scope.downloadableSite = $filter('json')(config.sites[site.proxy_to]);
-        }else {
-            $scope.downloadableSite = angular.copy($scope.selectedSite);
-        }
-        
-        var url = $scope.interpolate(config.url);
-        var manufacturer = angular.fromJson($scope.selectedManufacturer);
-        var router = angular.fromJson($scope.selectedRouter);
+      $scope.selectionChanged = function () {
+        var newURL = window.location.protocol + '//' + window.location.host + '/' + window.location.pathname;
 
-        if (manufacturer == null || router == null) {
-            return url;
-        }
-        if (manufacturer.name == config.manufacturers['6netgear'].name && $scope.selectedMode == 'factory') {
-            url += '.img';
-        } else if ( 'extension' in router) {
-            url += '.'+router.extension;
-        } else {
-            url += '.bin';
-        }
+        var args = []
+        if($scope.selectedRouter)
+          args.push('router=' + $scope.parse($scope.selectedRouter).id)
+        if($scope.selectedManufacturer)
+          args.push('manufacturer=' + $scope.parse($scope.selectedManufacturer).id)
+        if($scope.selectedSite)
+          args.push('region=' + $scope.selectedSite)
+        if($scope.selectedMode != 'factory')
+          args.push('mode=' + $scope.selectedMode)
+        newURL += '?' + args.join('&')
 
-      return url;
-    };
-    //select factory by default
-    $scope.selectedMode = "factory";
+        History.pushState(null, null, newURL);
+      }
 
-    //read selection from url parameters
-    if($location.search().mode != null) { $scope.selectedMode = $location.search().mode; }
-    if($location.search().region != null) { $scope.selectedSite = $filter('json')(config.sites[$location.search().region]); }
-    if($location.search().manufacturer != null) { $scope.selectedManufacturer = $filter('json')(config.manufacturers[$location.search().manufacturer]); }
-    if($location.search().router != null) { $scope.selectedRouter = $filter('json')(config.routers[$location.search().router]); }
+      //select factory by default
+      $scope.selectedMode = 'factory';
 
-
+      //read selection from url parameters
+      if($location.search().mode != null) { $scope.selectedMode = $location.search().mode; }
+      if($location.search().region != null) { $scope.selectedSite = $location.search().region; }
+      if($location.search().manufacturer != null) { $scope.selectedManufacturer = $filter('json')(config.manufacturers[$location.search().manufacturer]); }
+      if($location.search().router != null) { $scope.selectedRouter = $filter('json')(config.routers[$location.search().router]); }
+    }, function(err) {console.log(err)});
   })
   //make parameters work without #! in the url
   .config(function($locationProvider) {
     $locationProvider.html5Mode({ enabled: true, requireBase: false });
   });
-

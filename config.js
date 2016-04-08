@@ -20,6 +20,7 @@ sites:{
 "domaene12" : {id: "domaene12",short:"d02",name:"Dülmen (ohne Rorup)", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene02"},
 "domaene13" : {id: "domaene13",short:"d02",name:"Rorup", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene02"},
 "domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"1", version_base:"2016.1.1"},
+"domaene16" : {id: "domaene16",short:"d16",name:"Münster Promenade", version:"1.0.8", version_base:"2016.1.3"},
 },
 
 //router list for gluon v2015.1

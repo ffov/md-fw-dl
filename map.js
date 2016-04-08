@@ -4,7 +4,7 @@
 
 var mapTools = {
     settings : {},
-    bcolors : ['#2980B9', '#8E44AD', '#C83D2F', '#EC5E00', '#F1C40F', '#27AE60', '#34495E', '#EB008D', '#FF66C2', '#CCFF33', '#33CCFF', '#70E000'],
+    bcolors : ['#2980B9', '#8E44AD', '#C83D2F', '#EC5E00', '#F1C40F', '#27AE60', '#34495E', '#EB008D', '#FF66C2', '#CCFF33', '#33CCFF', '#70E000', '#EA001C'],
     activeLayer : false,
     selection_state : {
         mouseover : false //fix for multipolygon firefox issue
@@ -69,7 +69,7 @@ mapTools.initMap = function($scope, $http){
     angular.extend($scope, {
         muenster: {
             lat: 51.99,
-            lng: 7.3,
+            lng: 7.4,
             zoom: 9,
             //autoDiscover: true
         },

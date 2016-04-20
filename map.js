@@ -41,13 +41,15 @@ mapTools.getStyleClicked = function(dom){
 
 mapTools.prepare = function(sites){
     for (var dom in sites){
-        this.settings[dom] = {
-            'id' : sites[dom].id,
-            'name' : sites[dom].name,
-            'color' : this.getColor(),
-            'geojson' : 'shapes/'+sites[dom].id+'.geojson',
-            'active' : false
-        };
+        if (sites[dom].on_map){
+            this.settings[dom] = {
+                'id' : sites[dom].id,
+                'name' : sites[dom].name,
+                'color' : this.getColor(),
+                'geojson' : 'shapes/'+sites[dom].id+'.geojson',
+                'active' : false
+            };
+        }
     }
 };
 
@@ -131,23 +133,26 @@ mapTools.watchSelectedSite = function($scope, leafletData, newValue, oldValue){
     var newID = angular.fromJson(newValue);
     leafletData.getGeoJSON().then(function(lObjs){
         if (oldID){
-            var obj = {};
-            for (layer in lObjs[oldID.id]._layers){
-                obj = lObjs[oldID.id]._layers[layer];
-                break;
+            if (oldID.on_map){
+                var obj = {};
+                for (layer in lObjs[oldID.id]._layers){
+                    obj = lObjs[oldID.id]._layers[layer];
+                    break;
+                }
+                obj.setStyle(mapTools.getStyle(mapTools.settings[oldID.id]));
             }
-            obj.setStyle(mapTools.getStyle(mapTools.settings[oldID.id]));
         }
         if (newID){
-            var obj = {};
-            for (layer in lObjs[newID.id]._layers){
-                obj = lObjs[newID.id]._layers[layer];
-                break;
-            }
-            obj.setStyle(mapTools.getStyleClicked(mapTools.settings[newID.id]));
-            obj.bringToFront();
-            mapTools.activeLayer = obj;
-            
+            if (newID.on_map){
+                var obj = {};
+                for (layer in lObjs[newID.id]._layers){
+                    obj = lObjs[newID.id]._layers[layer];
+                    break;
+                }
+                obj.setStyle(mapTools.getStyleClicked(mapTools.settings[newID.id]));
+                obj.bringToFront();
+                mapTools.activeLayer = obj;
+            }    
         }
     });
 };

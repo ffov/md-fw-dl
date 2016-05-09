@@ -4,7 +4,7 @@
 
 var mapTools = {
     settings : {},
-    bcolors : ['#2980B9', '#8E44AD', '#C83D2F', '#EC5E00', '#F1C40F', '#27AE60', '#34495E', '#EB008D', '#FF66C2', '#CCFF33', '#33CCFF', '#70E000', '#EA001C'],
+    bcolors : ['#2980B9', '#8E44AD', '#C83D2F', '#EC5E00', '#F1C40F', '#27AE60', '#34495E', '#EB008D', '#FF66C2', '#CCFF33', '#33CCFF', '#70E000', '#EA001C', '#72DF9F', '#D44096', '#C2A4EA', '#4BD241', '#D2414B'],
     activeLayer : false,
     selection_state : {
         mouseover : false //fix for multipolygon firefox issue

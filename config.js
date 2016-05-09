@@ -30,7 +30,8 @@ sites:{
   "domaene22" : {id: "domaene22",short:"d22",name:"Steinfurt", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene03", on_map: true },
   "domaene23" : {id: "domaene23",short:"d23",name:"Steinfurt-West", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene03", on_map: true },
   "domaene24" : {id: "domaene24",short:"d24",name:"Wettringen", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene03", on_map: true },
-  "domaene25" : {id: "domaene25",short:"d25",name:"Steinfurt-Ost", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene04", on_map: true }
+  "domaene25" : {id: "domaene25",short:"d25",name:"Steinfurt-Ost", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene04", on_map: true },
+  "domaene101" : {id: "domaene101",short:"d101",name:"Selm", proxy_to: "domaene02", on_map: true }
 },
 
 //router list for gluon v2015.1

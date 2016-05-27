@@ -14,7 +14,7 @@ sites:{
   "domaene04" : {id: "domaene04",short:"d04",name:"Kreis Steinfurt Ost", version:"1.0.4", version_base:"2016.1.2", on_map: false },
   "domaene05" : {id: "domaene05",short:"d05",name:"Münster Süd", version:"1.0.4", version_base:"2016.1.2", on_map: true },
   "domaene06" : {id: "domaene06",short:"d06",name:"Westmünsterland", version:"1.0.4", version_base:"2016.1.2", on_map: true },
-  "domaene07" : {id: "domaene07",short:"d07",name:"Telgte", version:"1.0.4", version_base:"2016.1.2", proxy_to: "domaene14", on_map: true },
+  "domaene07" : {id: "domaene07",short:"d07",name:"Telgte", version:"1.1.3", version_base:"2016.1.x", on_map: true },
   "domaene08" : {id: "domaene08",short:"d08",name:"Gescher", version:"1.0.7", version_base:"2016.1.x", on_map: true },
   "domaene09" : {id: "domaene09",short:"d09",name:"Stadtlohn", version:"1.0.5", version_base:"2016.1.x", on_map: true },
   "domaene11" : {id: "domaene11",short:"d11",name:"Bocholt", version:"1.0.5", version_base:"2016.1.x", on_map: true },

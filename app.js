@@ -78,8 +78,8 @@ angular.module('firmwareDownload', ['ngMaterial', 'leaflet-directive'])
         if (manufacturer == null || router == null) {
             return url;
         }
-        if (manufacturer.name == config.manufacturers['6netgear'].name && $scope.selectedMode == 'factory') {
-            url += '.img';
+        if ('extensionupgrade' in router && $scope.selectedMode == 'sysupgrade') {
+            url += '.'+router.extensionupgrade;
         } else if ( 'extension' in router) {
             url += '.'+router.extension;
         } else {

@@ -31,10 +31,10 @@ sites:{
   "domaene23" : {id: "domaene23",short:"d23",name:"Metelen", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene24" : {id: "domaene24",short:"d24",name:"Wettringen", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene25" : {id: "domaene25",short:"d25",name:"Steinfurt-Ost", version:"1.1.4", version_base:"2016.1.5", on_map: true },
-  "domaene27" : {id: "domaene27",short:"d27",name:"Selm", version:"1.1.4", version_base:"2016.1.5", on_map: true }
-  "domaene28" : {id: "domaene28",short:"d28",name:"Horstmar", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" }
-  "domaene29" : {id: "domaene29",short:"d29",name:"Laer", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" }
-  "domaene30" : {id: "domaene30",short:"d30",name:"Nordwalde", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" }
+  "domaene27" : {id: "domaene27",short:"d27",name:"Selm", version:"1.1.4", version_base:"2016.1.5", on_map: true },
+  "domaene28" : {id: "domaene28",short:"d28",name:"Horstmar", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" },
+  "domaene29" : {id: "domaene29",short:"d29",name:"Laer", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" },
+  "domaene30" : {id: "domaene30",short:"d30",name:"Nordwalde", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" },
   "domaene31" : {id: "domaene31",short:"d31",name:"Altenberge", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" }
 },
 

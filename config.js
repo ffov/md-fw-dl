@@ -28,10 +28,14 @@ sites:{
   "domaene20" : {id: "domaene20",short:"d20",name:"Ochtrup", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene21" : {id: "domaene21",short:"d21",name:"Rheine", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene22" : {id: "domaene22",short:"d22",name:"Steinfurt", version:"1.1.4", version_base:"2016.1.5", on_map: true },
-  "domaene23" : {id: "domaene23",short:"d23",name:"Steinfurt-West", version:"1.1.4", version_base:"2016.1.5", on_map: true },
+  "domaene23" : {id: "domaene23",short:"d23",name:"Metelen", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene24" : {id: "domaene24",short:"d24",name:"Wettringen", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene25" : {id: "domaene25",short:"d25",name:"Steinfurt-Ost", version:"1.1.4", version_base:"2016.1.5", on_map: true },
-  "domaene27" : {id: "domaene27",short:"d27",name:"Selm", version:"1.1.3", version_base:"2016.1.x", on_map: true }
+  "domaene27" : {id: "domaene27",short:"d27",name:"Selm", version:"1.1.4", version_base:"2016.1.5", on_map: true }
+  "domaene28" : {id: "domaene28",short:"d28",name:"Horstmar", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" }
+  "domaene29" : {id: "domaene29",short:"d29",name:"Laer", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" }
+  "domaene30" : {id: "domaene30",short:"d30",name:"Nordwalde", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" }
+  "domaene31" : {id: "domaene31",short:"d31",name:"Altenberge", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" }
 },
 
 //router list for gluon v2015.1

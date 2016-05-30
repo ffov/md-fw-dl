@@ -1,6 +1,6 @@
 var config = {
 
-version: "2016.1.2",
+version: "2016.1.5",
 
 modes: {
   "factory": "Erstinstallation (Neu gekaufter Router)",
@@ -33,10 +33,10 @@ sites:{
   "domaene25" : {id: "domaene25",short:"d25",name:"Steinfurt-Ost", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene26" : {id: "domaene26",short:"d26",name:"Borken", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene27" : {id: "domaene27",short:"d27",name:"Selm", version:"1.1.4", version_base:"2016.1.5", on_map: true },
-  "domaene28" : {id: "domaene28",short:"d28",name:"Horstmar", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" },
-  "domaene29" : {id: "domaene29",short:"d29",name:"Laer", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" },
-  "domaene30" : {id: "domaene30",short:"d30",name:"Nordwalde", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" },
-  "domaene31" : {id: "domaene31",short:"d31",name:"Altenberge", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene03" }
+  "domaene28" : {id: "domaene28",short:"d28",name:"Horstmar", version:"1.1.4", version_base:"2016.1.5", on_map: true},
+  "domaene29" : {id: "domaene29",short:"d29",name:"Laer", version:"1.1.4", version_base:"2016.1.5", on_map: true},
+  "domaene30" : {id: "domaene30",short:"d30",name:"Nordwalde", version:"1.1.4", version_base:"2016.1.5", on_map: true},
+  "domaene31" : {id: "domaene31",short:"d31",name:"Altenberge", version:"1.1.4", version_base:"2016.1.5", on_map: true}
 },
 
 //router list for gluon v2015.1

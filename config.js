@@ -58,7 +58,7 @@ sites:{
   "domaene50" : {id: "domaene50",short:"d50",name:"Nottuln", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene_02"},
   "domaene51" : {id: "domaene51",short:"d51",name:"Olfen", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene_02"},
   "domaene52" : {id: "domaene52",short:"d52",name:"Rosendahl", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene_02"},
-  "domaene53" : {id: "domaene53",short:"d53",name:"Senden", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene_02"},
+  "domaene53" : {id: "domaene53",short:"d53",name:"Senden", version:"1.1.4", version_base:"2016.1.5", on_map: true, proxy_to: "domaene_02"}
 },
 
 //router list for gluon v2015.1

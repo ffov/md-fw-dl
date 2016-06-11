@@ -8,7 +8,7 @@ modes: {
 },
 
 sites:{
-  "domaene01" : {id: "domaene01",short:"d01",name:"Münster Stadt", version:"1.0.4", version_base:"2016.1.2", on_map: true },
+  "domaene01" : {id: "domaene01",short:"d01",name:"Münster Stadt", version:"1.0.8", version_base:"2016.1.3", on_map: true },
   "domaene02" : {id: "domaene02",short:"d02",name:"Kreis Coesfeld", version:"1.0.4", version_base:"2016.1.2", on_map: false },
   "domaene03" : {id: "domaene03",short:"d03",name:"Kreis Steinfurt West", version:"1.0.4", version_base:"2016.1.2", on_map: false },
   "domaene04" : {id: "domaene04",short:"d04",name:"Kreis Steinfurt Ost", version:"1.0.4", version_base:"2016.1.2", on_map: false },

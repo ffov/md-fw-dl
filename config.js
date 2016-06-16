@@ -20,7 +20,7 @@ sites:{
   "domaene11" : {id: "domaene11",short:"d11",name:"Bocholt", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene12" : {id: "domaene12",short:"d12",name:"Dülmen (ohne Rorup)", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene13" : {id: "domaene13",short:"d13",name:"Rorup", version:"1.1.4", version_base:"2016.1.5", on_map: true },
-  "domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"1", version_base:"2016.1.1", on_map: false },
+  //"domaene14" : {id: "domaene14",short:"d14",name:"Kreis Warendorf", version:"1", version_base:"2016.1.1", on_map: false },
   "domaene16" : {id: "domaene16",short:"d16",name:"Münster Promenade", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene17" : {id: "domaene17",short:"d17",name:"Emsdetten", version:"1.1.4", version_base:"2016.1.5", on_map: true },
   "domaene18" : {id: "domaene18",short:"d18",name:"Greven", version:"1.1.4", version_base:"2016.1.5", on_map: true },

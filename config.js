@@ -34,7 +34,7 @@ sites:{
   "domaene24" : {id: "domaene24",short:"d24",name:"Wettringen", version:"1.1.6", version_base:"2016.1.5", on_map: true },
   "domaene25" : {id: "domaene25",short:"d25",name:"Steinfurt-Ost", version:"1.1.6", version_base:"2016.1.5", on_map: true },
   "domaene26" : {id: "domaene26",short:"d26",name:"Borken", version:"1.1.6", version_base:"2016.1.5", on_map: true },
-  "domaene27" : {id: "domaene27",short:"d27",name:"Selm", version:"1.1.6", version_base:"2016.1.5", on_map: true },
+  "domaene27" : {id: "domaene27",short:"d27",name:"Selm", version:"1.1.9", version_base:"2016.1.5", on_map: true },
   "domaene28" : {id: "domaene28",short:"d28",name:"Horstmar", version:"1.1.6", version_base:"2016.1.5", on_map: true},
   "domaene29" : {id: "domaene29",short:"d29",name:"Laer", version:"1.1.6", version_base:"2016.1.5", on_map: true},
   "domaene30" : {id: "domaene30",short:"d30",name:"Nordwalde", version:"1.1.6", version_base:"2016.1.5", on_map: true},

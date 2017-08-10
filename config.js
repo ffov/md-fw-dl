@@ -8,14 +8,14 @@ modes: {
 },
 
 sites:{
-  "domaene01" : {id: "domaene01",short:"d01",name:"Recklinghausen - Herten", version:"1.2.1", version_base:"2016.1.6", on_map: true },
-  "domaene02" : {id: "domaene02",short:"d02",name:"Gladbeck - Bottrop", version:"1.2.1", version_base:"2016.1.6", on_map: true },
-  "domaene03" : {id: "domaene03",short:"d03",name:"Dorsten - Marl", version:"1.2.1", version_base:"2016.1.6", on_map: true },
-  "domaene04" : {id: "domaene04",short:"d04",name:"Haltern am See - Raesfeld", version:"1.2.1", version_base:"2016.1.6", on_map: true },
-  //"domaene05" : {id: "domaene05",short:"d05",name:"Münster Süd", version:"1.2.1", version_base:"2016.1.6", on_map: false },
-  //"domaene06" : {id: "domaene06",short:"d06",name:"Westmünsterland", version:"1.2.1", version_base:"2016.1.6", on_map: false },
-  //"domaene07" : {id: "domaene07",short:"d07",name:"Telgte", version:"1.2.1", version_base:"2016.1.6", on_map: false },
-  //"domaene08" : {id: "domaene08",short:"d08",name:"Gescher", version:"1.2.1", version_base:"2016.1.6", on_map: false },
+  "domaene01" : {id: "domaene01",short:"d01",name:"Datteln", version:"1.2.1", version_base:"2016.1.6", on_map: true },
+  "domaene02" : {id: "domaene02",short:"d02",name:"Waltrop", version:"1.2.1", version_base:"2016.1.6", on_map: true },
+  "domaene03" : {id: "domaene03",short:"d03",name:"Oer-Erkenschwick", version:"1.2.1", version_base:"2016.1.6", on_map: true },
+  "domaene04" : {id: "domaene04",short:"d04",name:"Castrop-Rauxel", version:"1.2.1", version_base:"2016.1.6", on_map: true },
+  //"domaene05" : {id: "domaene05",short:"d05",name:"Aussenposten", version:"1.2.1", version_base:"2016.1.6", on_map: false },
+  //"domaene06" : {id: "domaene06",short:"d06",name:"Reserve", version:"1.2.1", version_base:"2016.1.6", on_map: false },
+  //"domaene07" : {id: "domaene07",short:"d07",name:"Reserve", version:"1.2.1", version_base:"2016.1.6", on_map: false },
+  //"domaene08" : {id: "domaene08",short:"d08",name:"Spezialprojekte", version:"1.2.1", version_base:"2016.1.6", on_map: false },
 },
 
 //router list for gluon v2015.1
@@ -155,9 +155,9 @@ routers: {
  "x86-vmware":{id:"x86-vmware",name:"vmware",manufacturer:"x86", extension :"vmdk" }, // only abailable for factory
 },
 
-name: "Emscherland",
+name: "Ostvest",
 
 
-url: "http://firmware.freifunk-emscherland.de/{{parse(downloadableSite).id}}/versions/v{{parse(downloadableSite).version}}/{{selectedMode}}/gluon-ffel{{parse(downloadableSite).short}}-v" +
+url: "http://firmware.freifunk-ostvest.de/{{parse(downloadableSite).id}}/versions/v{{parse(downloadableSite).version}}/{{selectedMode}}/gluon-ffel{{parse(downloadableSite).short}}-v" +
 "{{parse(downloadableSite).version_base}}+{{parse(downloadableSite).version}}-{{parse(selectedRouter).id}}{{selectedMode=='sysupgrade'?'-sysupgrade':''}}"
 }

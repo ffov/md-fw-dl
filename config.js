@@ -158,6 +158,6 @@ routers: {
 name: "Ostvest",
 
 
-url: "http://images.freifunk-ostvest.de/md-fw-dl/{{parse(downloadableSite).id}}/versions/v{{parse(downloadableSite).version}}/{{selectedMode}}/gluon-ffov{{parse(downloadableSite).short}}-v" +
+url: "http://images.freifunk-ostvest.de/md-fw-dl-dom/{{parse(downloadableSite).id}}/versions/v{{parse(downloadableSite).version}}/{{selectedMode}}/gluon-ffov{{parse(downloadableSite).short}}-v" +
 "{{parse(downloadableSite).version_base}}+{{parse(downloadableSite).version}}-{{parse(selectedRouter).id}}{{selectedMode=='sysupgrade'?'-sysupgrade':''}}"
 }

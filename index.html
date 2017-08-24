@@ -41,13 +41,13 @@
 <md-whiteframe class="md-whiteframe-z2" layout layout-align="center center">
     <div class="whiteframe-content">
 
-        <img src="img/logo.png" class="md-card-image" alt="Logo Freifunk Münsterland">
+        <img src="img/logo.png" class="md-card-image" alt="Logo Freifunk Ostvest">
 
         <h1 class="headline">Freifunk <a ng-show="config.name">{{config.name}}</a> Firmware</h1>
 
         <h2 class="headline" ng-show="config.version">Version {{config.version}} herunterladen</h2>
         
-        <leaflet id="dommap" lf-center="muenster" geojson="geojson" geojson-nested="true" height="420px" width="100%"></leaflet>
+        <leaflet id="dommap" lf-center="datteln" geojson="geojson" geojson-nested="true" height="420px" width="100%"></leaflet>
 
         <md-select ng-model="selectedMode" ng-show="config.modes">
             <md-option ng-repeat="(key, value) in config.modes" value="{{key}}">{{value}}</md-option>

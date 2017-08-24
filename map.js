@@ -73,7 +73,7 @@ mapTools.initMap = function($scope, $http){
         ostvest: {
             lat: 51.62922,
             lng: 7.30347,
-            zoom: 9,
+            zoom: 5,
             //autoDiscover: true
         },
         defaults: {

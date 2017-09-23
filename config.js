@@ -8,11 +8,11 @@ modes: {
 },
 
 sites:{
-  "domaene01" : {id: "domaene01",short:"d01",name:"Datteln", version:"0.0.1", version_base:"2016.2.6", on_map: true },
-  "domaene02" : {id: "domaene02",short:"d02",name:"Waltrop", version:"0.0.1", version_base:"2016.2.6", on_map: true },
-  "domaene03" : {id: "domaene03",short:"d03",name:"Oer-Erkenschwick", version:"0.0.1", version_base:"2016.2.6", on_map: true },
-  "domaene04" : {id: "domaene04",short:"d04",name:"Castrop-Rauxel", version:"0.0.1", version_base:"2016.2.6", on_map: true },
-  "domaene05" : {id: "domaene05",short:"d05",name:"Aussenposten", version:"0.0.1", version_base:"2016.2.6", on_map: false },
+  "domaene01" : {id: "domaene01",short:"d01",name:"Datteln", version:"0.0.2", version_base:"2016.2.7", on_map: true },
+  "domaene02" : {id: "domaene02",short:"d02",name:"Waltrop", version:"0.0.2", version_base:"2016.2.7", on_map: true },
+  "domaene03" : {id: "domaene03",short:"d03",name:"Oer-Erkenschwick", version:"0.0.2", version_base:"2016.2.7", on_map: true },
+  "domaene04" : {id: "domaene04",short:"d04",name:"Castrop-Rauxel", version:"0.0.2", version_base:"2016.2.7", on_map: true },
+  "domaene05" : {id: "domaene05",short:"d05",name:"Aussenposten", version:"0.0.2", version_base:"2016.2.7", on_map: false },
   //"domaene06" : {id: "domaene06",short:"d06",name:"Reserve", version:"1.2.1", version_base:"2016.1.6", on_map: false },
   //"domaene07" : {id: "domaene07",short:"d07",name:"Reserve", version:"1.2.1", version_base:"2016.1.6", on_map: false },
   //"domaene08" : {id: "domaene08",short:"d08",name:"Spezialprojekte", version:"1.2.1", version_base:"2016.1.6", on_map: false },
